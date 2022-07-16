@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    background-color: rgb(245, 245, 21);
+}
+/* inicio header canario */
+header {
+    background-color: rgb(251, 251, 250);
+}
+header h1 {
+    font-family: Times, 'Times New Roman', serif;
+    color: rgb(238, 238, 27);
+    text-align: center;
+}
+header h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(115, 115, 115);
+    text-align: center;
+}
+
+.logo__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+header img {
+   width: 100px;
+   height: 70px;
+   margin:  0 0 0 20px;
+}
+
+header nav {
+    text-align: right;
+    font-size: large;
+    word-spacing: 0.15cm;
+    margin: 0 20px 0 0;
+    
+}
+.nav__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+header nav ul li {
+    display: inline;
+    font-size: small;
+}
+/* fin header canario */
+
+/* inicio portada index */
+main .portada img{
+    width: 100%;
+    height: 0.2%;
+    padding: 0.2%;
+    border: none;
+}
+ .contenedor__flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+ }
+
+main .portadaText p {
+    text-align: center;
+    background-color: rgb(246, 246, 118);
+    font-size:medium;
+    padding-top: 40px;
+    padding-bottom: 150px;
+    height: 0% 
+}
+/* fin texto de portada index */
+/* inicio de footer */
+footer {
+    color: white;
+    line-height: 20px;
+    background-image: url("../assets/imag/gray.jpg");
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+.footer__flex {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+
+}
+
+.footer__creditos {
+    font-size: 0.8rem;
+    text-align: center;
+}
+/* fin de footer */
+
+/*inicio main de nosotros */
+.gridPadre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto;
+    grid-template-areas: 
+    "titulo titulo"
+    "texto imagen";
+    justify-items: left;
+                        
+}
+h2 {
+    grid-area: titulo;
+    text-align: left;
+}
+p{
+    grid-area: texto;
+}
+.nosotros1{
+    grid-area: imagen;
+}
+.gridPadre img {
+    width: 600px;
+}
+
+/* fin main de nosotros */
+
+/* inicio vista mobile index */
+@media only screen and (max-width: 320px) {
+    body {
+        background-color: rgb(245, 245, 21);
+    }
+    
+}
+/*fin viste mobile index  */
+
+/* inicio vista desktop index */
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: rgb(245, 245, 21);
+    }
+    
+}
+/* fin vista desktop index */
+
+/* inicio vista mobile nosotros */
+@media only screen and (max-width: 320px) {
+    .gridPadre{
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "texto" 
+        "imagen";
+        grid-template-rows: 150px auto auto;
+        grid-template-columns: 100%;
+
+    }
+}
+/* fin vista mobile nosotros */
+/* inicio vista desktop nosotros */
+@media only screen and (max-width: 1024px) {
+    .gridPadre{
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "texto" 
+        "imagen";
+        grid-template-rows: 150px auto auto;
+        grid-template-columns: 100%;
+
+    }
+}
+/* fin vista desktop nosotros */
+/* inicio gradiente servicios */
+.gradiente {
+    background-image: linear-gradient(yellow, orange);
+}
+/* fin gradiente servicios */
+/* inicio escala imagenes producto */
+.accesoriosimg {
+    width: 200px;
+}
+.accesoriosimg:hover{
+    transform: scale(2,2);
+}
+/* fin escala imagenes producto */
+/* inicio animaciones producto */
+.animacionproductos {
+    color: grey;
+    font-size: 30px;
+    /* nombre */
+    animation-name: efecto;
+    /* veces que se ejecuta */
+    animation-iteration-count: infinite;
+    /* duracion */
+    animation-duration: 4s;
+    /* tiempo que demora hasta que carga */
+    animation-delay: 1s;
+}
+@keyframes efecto{
+    0%{
+        color: gray;
+    }
+    50%{
+        color: white;
+    }
+    75%{
+        color: black;
+    }
+    100%{
+        color: gray;
+    }
+}
