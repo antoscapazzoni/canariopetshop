@@ -9,7 +9,7 @@ body {
 /* inicio header canario */
 header {
     background-color: rgb(251, 251, 250);
-}
+ }
 header h1 {
     font-family: Times, 'Times New Roman', serif;
     color: rgb(238, 238, 27);
@@ -62,6 +62,8 @@ main .portada img{
     height: 0.2%;
     padding: 0.2%;
     border: none;
+    
+    
 }
  .contenedor__flex {
     display: flex;
@@ -76,15 +78,16 @@ main .portadaText p {
     text-align: center;
     background-color: rgb(246, 246, 118);
     font-size:medium;
-    padding-top: 40px;
     padding-bottom: 150px;
+    padding-top: 30px;
     height: 0% 
+
 }
 /* fin texto de portada index */
 /* inicio de footer */
 footer {
     color: white;
-    line-height: 20px;
+    line-height: 8px;
     background-image: url("../assets/imag/gray.jpg");
     background-color: grey;
     background-repeat: no-repeat;
@@ -92,6 +95,9 @@ footer {
     bottom: 0;
     position: fixed;
     width: 100%;
+}
+.fa-facebook-f:before{
+    font-size: 1.5rem;
 }
 .footer__flex {
     display: flex;
@@ -133,52 +139,6 @@ p{
 
 /* fin main de nosotros */
 
-/* inicio vista mobile index */
-@media only screen and (max-width: 320px) {
-    body {
-        background-color: rgb(245, 245, 21);
-    }
-    
-}
-/*fin viste mobile index  */
-
-/* inicio vista desktop index */
-@media only screen and (max-width: 1024px) {
-    body {
-        background-color: rgb(245, 245, 21);
-    }
-    
-}
-/* fin vista desktop index */
-
-/* inicio vista mobile nosotros */
-@media only screen and (max-width: 320px) {
-    .gridPadre{
-        display: grid;
-        grid-template-areas: 
-        "titulo"
-        "texto" 
-        "imagen";
-        grid-template-rows: 150px auto auto;
-        grid-template-columns: 100%;
-
-    }
-}
-/* fin vista mobile nosotros */
-/* inicio vista desktop nosotros */
-@media only screen and (max-width: 1024px) {
-    .gridPadre{
-        display: grid;
-        grid-template-areas: 
-        "titulo"
-        "texto" 
-        "imagen";
-        grid-template-rows: 150px auto auto;
-        grid-template-columns: 100%;
-
-    }
-}
-/* fin vista desktop nosotros */
 /* inicio gradiente servicios */
 .gradiente {
     background-image: linear-gradient(yellow, orange);
@@ -219,3 +179,22 @@ p{
         color: gray;
     }
 }/* fin animaciones productos */
+/* inicio vista mobile index y servicios */
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: rgb(245, 245, 21);
+    }
+    .gridPadre{
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "texto" 
+        "imagen";
+        grid-template-rows: 150px auto auto;
+        grid-template-columns: 100%;
+    }
+    .gradiente {
+        background-image: linear-gradient(rgb(32, 32, 15), rgb(214, 219, 54));
+    }
+}
+/* fin vista mobile nosotros */
