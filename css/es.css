@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(245, 245, 21);
+}
+
+/* inicio header canario */
+header {
+    background-color: rgb(251, 251, 250);
+}
+
+header h1 {
+    font-family: Times, 'Times New Roman', serif;
+    color: rgb(238, 238, 27);
+    text-align: center;
+}
+
+header h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(115, 115, 115);
+    text-align: center;
+}
+
+.logo__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.carrito {
+    font-size: 200%;
+}
+
+header img {
+    width: 100px;
+    height: 70px;
+    margin: 0 0 0 20px;
+}
+
+header nav {
+    text-align: right;
+    font-size: large;
+    word-spacing: 0.15cm;
+    margin: 0 20px 0 0;
+
+}
+
+.nav__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+header nav ul li {
+    display: inline;
+    font-size: small;
+}
+
+/* fin header canario */
+
+/* inicio portada index */
+.carousel-inner {
+    height: 800px;
+}
+
+.contenedor__flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloportada {
+    text-align: center;
+    color: grey;
+    font-size: 30px;
+    /* nombre */
+    animation-name: efecto;
+    /* veces que se ejecuta */
+    animation-iteration-count: infinite;
+    /* duracion */
+    animation-duration: 4s;
+    /* tiempo que demora hasta que carga */
+    animation-delay: 1s;
+}
+
+@keyframes efecto {
+    0% {
+        color: gray;
+    }
+
+    50% {
+        color: white;
+    }
+
+    75% {
+        color: black;
+    }
+
+    100% {
+        color: gray;
+    }
+}
+
+main .portadaText p {
+    text-align: center;
+    background-color: rgb(246, 246, 118);
+    font-size: medium;
+    padding-bottom: 200px;
+    padding-top: 30px;
+    height: 0%
+}
+
+/* fin texto de portada index */
+/* inicio de footer */
+footer {
+    color: white;
+    line-height: 15px;
+    background-image: url("../assets/imag/gray.jpg");
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.bi-whatsapp:before {
+    font-size: 1.5rem;
+}
+
+.bi-geo-alt::before {
+    font-size: 1.5rem;
+}
+
+.bi-envelope::before {
+    font-size: 1.5rem;
+}
+
+.fa-facebook-f:before {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.fa-instagram:before {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.fa-twitter:before {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.fa-cc-visa:before {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.fa-cc-mastercard::before {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.fa-cc-amex:before {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.fa-cc-paypal:before {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer__flex {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+
+}
+
+.footer__creditos {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* fin de footer */
+
+/*inicio main de nosotros */
+.gridPadre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+        "titulo titulo"
+        "texto imagen";
+    justify-items: left;
+}
+
+h2 {
+    grid-area: titulo;
+    text-align: left;
+    padding-top:0.5px ;
+}
+
+.text_nosotros{
+    grid-area:texto;
+    margin: 1cm;
+    height: 1cm;
+    padding-bottom: 400px;
+    padding-top: 20px;
+}
+
+.gridPadre img {
+    grid-area:imagen;
+    width: 600px;
+    padding-bottom: 400px;
+}
+
+/* fin main de nosotros */
+/* animacion de titulos nosotros productos servicios contacto */
+.animacion_titulos {
+    color: grey;
+    font-size: 30px;
+    padding: 2cm;
+    height: 1cm;
+    /* nombre */
+    animation-name: efecto;
+    /* veces que se ejecuta */
+    animation-iteration-count: infinite;
+    /* duracion */
+    animation-duration: 4s;
+    /* tiempo que demora hasta que carga */
+    animation-delay: 1s;
+}
+
+@keyframes efecto {
+    0% {
+        color: gray;
+    }
+
+    50% {
+        color: white;
+    }
+
+    75% {
+        color: black;
+    }
+
+    100% {
+        color: gray;
+    }
+}
+
+/* fin animaciones titulo nosotros */
+
+
+/* inicio gradiente servicios */
+.gradiente {
+    background-image: linear-gradient(yellow, orange);
+}
+
+/* fin gradiente servicios */
+/* inicio escala imagenes producto */
+.accesoriosimg {
+    width: 200px;
+}
+
+.accesoriosimg:hover {
+    transform: scale(2, 2);
+}
+
+/* fin escala imagenes producto */
+
+/* inicio vista mobile index_nosotros_servicios */
+@media only screen and (max-width: 420px) {
+   /* inicio @media index */
+    body {
+        background-color: rgb(245, 245, 21);
+       height: 1000px;
+
+    }
+
+    .carousel-inner {
+        height: 300px;
+    }
+
+    main .portadaText p {
+        text-align: center;
+        background-color: rgb(246, 246, 118);
+        font-size: medium;
+        padding-bottom: 50px;
+        padding-top: 70px;
+        height: 0%
+    }
+/* fin de index */
+/* inicio  @media nosotros */
+    .gridPadre {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px;
+        grid-template-areas:
+            "titulo"
+            "imagen"
+            "texto";
+        justify-items: center;
+
+    }
+
+    h2 {
+        grid-area: titulo;
+        text-align: center;
+        padding-bottom: 100px;
+        height: 1px;
+    }
+
+    .text_nosotros {
+        grid-area: texto;
+        margin:1cm;
+        height:1cm;
+        padding-bottom: 600px;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .gridPadre img {
+        grid-area:imagen;
+        width: 350px;
+        padding-bottom: 1px;
+    }
+/* fin @media nosotros */
+/* inicio @media servicios */
+.gradiente {
+    background-image: linear-gradient(rgb(32, 32, 15), rgb(214, 219, 54));
+}
+/* fin @media servicios */
+/* inicio @media footer */
+    footer {
+        color: white;
+        line-height: 6px;
+        background-image: url("../assets/imag/gray.jpg");
+        background-color: grey;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        width: 100%;
+        height: 0.5s;
+    }
+
+    .bi-whatsapp:before {
+        font-size: 1rem;
+    }
+
+    .bi-geo-alt::before {
+        font-size: 1rem;
+    }
+
+    .bi-envelope::before {
+        font-size: 1rem;
+    }
+
+    .fa-facebook-f:before {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .fa-instagram:before {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .fa-twitter:before {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .fa-cc-visa:before {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .fa-cc-mastercard::before {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .fa-cc-amex:before {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .fa-cc-paypal:before {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .footer__flex {
+        display: flex;
+        justify-content: space-around;
+        font-size: 0.6rem;
+        
+    }
+
+    .footer__creditos {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    /* fin @media footer */
+}
+/* fin vista mobile index nosotros y servicios*/
