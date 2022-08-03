@@ -1,0 +1,17 @@
+
+@mixin flex ($dis,$flex-direction, $flex-wrap,$align-content , $justify, $align) { 
+    
+    display: $dis;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    align-content: $align-content;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.contenedor__flex {
+    @include flex (flex,column,nowrap,center,center,center)
+    
+}
+
+

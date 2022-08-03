@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=C, initial-scale=1.0">
+    <meta name="keywords" content="petshop cordoba,mascotas, alimentos para mascotas">
+    <meta name="description" content="Te esperamos en Av. La Cordillera 3946 o comunicate a nuestro wsp +5493513845741">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <link rel="shortcut icon" href="../assets/imag/logo1.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imag/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Contacto</title>
+    <title>Canario Pet Shop-Contacto</title>
 </head>
 
 <body>
@@ -23,9 +25,8 @@
             </div>
         </div>
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -47,24 +48,27 @@
     <!-- Fin de header -->
     <!-- Inicio de main -->
     <main>
-        <div class="animacion_titulos">
-            <h2>Contacto</h2>
-        </div>
-        <form action="">
-            <label for="Nombre">Nombre:</label>
-            <input type="text">
-            <br>
-            <br>
-            <label for="E-mail">E-mail:</label>
-            <input type="text">
-            <br>
-            <br> <br>
-            <label for="Comentarios">Comentarios</label>
-            <br>
-            <textarea name="Comentarios" id="Comentarios" cols="30" rows="10"></textarea>
-            <br>
-            <input type="submit" value="Enviar">
-        </form>
+        <section class="fondocontacto">
+            <div class="animacion_titulos">
+                <h2>Contactanos</h2>
+            </div>
+            <form role="form_flex">
+                <div class="form-group">
+                    <div class="mb-1 col-md-6">
+                        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                        <input type="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                        <label for="exampleFormControlInput1" class="form-label">Apellido</label>
+                        <input type="apellido" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+                    </div>
+                    <div class="mb-4 col-md-6">
+                        <label for="exampleFormControlTextarea1" class="form-label">Dejanos tu mensaje</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </form>
+
+        </section>
     </main>
     <!-- Fin de main -->
     <!-- Inicio de footer -->
