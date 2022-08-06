@@ -1,0 +1,47 @@
+.gridpadre_servicios {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+    justify-items: stretch;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: stretch;
+    
+}
+
+.peluqueria {
+    grid-area:1 / 1 / 2 / 2;
+    padding: 2cm;
+    border: 1cm;
+
+}
+
+.imgpeluqueria {
+    grid-area: 1 / 2 / 2 / 3; 
+    border: 1cm;
+    padding: 2cm;
+    
+}
+
+.veterinaria {
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 2cm;
+    padding-bottom: 300px;
+    padding-top: 60px;
+
+}
+
+.imgveterinaria {
+    grid-area: 2 / 2 / 3 / 3;
+    padding-bottom: 300px;
+    padding-top: 60px;
+    padding: 2cm;
+    
+}
+ /* inicio @media servicios */
+ .gradiente {
+    background-image: linear-gradient(rgb(32, 32, 15), rgb(214, 219, 54));
+}
+
+/* fin @media servicios */

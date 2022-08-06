@@ -1,134 +1,5 @@
-.contenedor__flex {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center; }
-
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none; }
-
-body {
-  background-color: #f5f515; }
-
-/* inicio header canario */
-header {
-  background-color: #fbfbfa; }
-
-header h1 {
-  font-family: Times, 'Times New Roman', serif;
-  color: #eeee1b;
-  text-align: center; }
-
-header h2 {
-  font-family: 'Times New Roman', Times, serif;
-  color: #737373;
-  text-align: center; }
-
-.logo__flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: flex-start;
-  align-items: flex-start; }
-
-.carrito {
-  font-size: 200%; }
-
-header img {
-  width: 100px;
-  height: 70px;
-  margin: 0 0 0 20px; }
-
-.nav-bar {
-  text-align: right;
-  font-size: large;
-  word-spacing: 0.15cm;
-  margin: 0 20px 0 0; }
-
-.nav-bar {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-  align-items: flex-start; }
-
-.nav-bar {
-  display: inline;
-  font-size: small; }
-
-/* fin header canario */
-/* inicio portada index */
-.carousel-inner {
-  height: 700px; }
-
-.tituloportada {
-  text-align: center;
-  color: grey;
-  font-size: 40px;
-  /* nombre */
-  animation-name: efecto;
-  /* veces que se ejecuta */
-  animation-iteration-count: infinite;
-  /* duracion */
-  animation-duration: 4s;
-  /* tiempo que demora hasta que carga */
-  animation-delay: 1s; }
-
-@keyframes efecto {
-  0% {
-    color: gray; }
-  50% {
-    color: white; }
-  75% {
-    color: black; }
-  100% {
-    color: gray; } }
-
-main .portadaText p {
-  text-align: center;
-  background-color: #f6f676;
-  font-size: medium;
-  padding-bottom: 200px;
-  padding-top: 30px;
-  height: 0%; }
-
-/* fin texto de portada index */
-/* inicio de footer */
-footer {
-  color: white;
-  line-height: 15px;
-  background-image: url("../assets/imag/gray.jpg");
-  background-color: grey;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  bottom: 0;
-  width: 100%; }
-  footer ul li {
-    font-size: 1.5rem; }
-    footer ul li a {
-      color: white; }
-  footer .bi {
-    font-size: 1.2rem; }
-    footer .bi p {
-      font-size: 1.5rem; }
-
-.footer__flex {
-  display: flex;
-  justify-content: space-around;
-  font-size: 0.8rem; }
-
-.footer__creditos {
-  font-size: 0.8rem;
-  text-align: center; }
-
-/* fin de footer */
+/* mixin portada index */
+/*  fin mixin portada index  */
 /*inicio main de nosotros */
 .gridPadre {
   display: grid;
@@ -138,29 +9,10 @@ footer {
   justify-items: left; }
 
 .animacion_titulos {
-  grid-area: titulo;
-  text-align: left;
-  color: grey;
-  padding: 1cm;
-  height: 1cm;
-  /* nombre */
-  animation-name: efecto;
-  /* veces que se ejecuta */
-  animation-iteration-count: infinite;
-  /* duracion */
-  animation-duration: 4s;
-  /* tiempo que demora hasta que carga */
-  animation-delay: 1s; }
-
-@keyframes efecto {
-  0% {
-    color: gray; }
-  50% {
-    color: white; }
-  75% {
-    color: black; }
-  100% {
-    color: gray; } }
+  grid-area: titulo; }
+  .animacion_titulos .tit {
+    text-align: left;
+    padding: 1rem; }
 
 .text_nosotros {
   grid-area: texto;
@@ -175,23 +27,54 @@ footer {
   padding-bottom: 400px; }
 
 /* fin main de nosotros */
-/* inicio productos*/
+/* inicio  @media nosotros */
+@media only screen and (max-width: 420px) {
+  .gridPadre {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px;
+    grid-template-areas: "titulo" "imagen" "texto";
+    justify-items: center; }
+  h2 {
+    grid-area: titulo;
+    text-align: center;
+    padding-bottom: 100px;
+    height: 1px; }
+  .text_nosotros {
+    grid-area: texto;
+    margin: 1cm;
+    height: 1cm;
+    padding-bottom: 600px;
+    padding-top: 10px;
+    text-align: center; }
+  .gridPadre img {
+    grid-area: imagen;
+    width: 350px;
+    padding-bottom: 1px; } }
+
 h4 {
   color: white;
   text-align: start;
   padding: 0.5cm; }
 
-.alimentos_flex, .accesorios_flex {
+.alimentos_flex {
   display: flex;
   align-content: flex-start;
   justify-content: space-around;
   align-items: center;
   flex-direction: row; }
-  .alimentos_flex img:hover, .accesorios_flex img:hover {
+  .alimentos_flex img:hover {
     transform: scale(2, 2); }
 
-/* extend */
-/* extend */
+.accesorios_flex {
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row; }
+  .accesorios_flex img:hover {
+    transform: scale(2, 2); }
+
 .cuchas_flex {
   display: flex;
   align-content: flex-start;
@@ -203,7 +86,6 @@ h4 {
     transform: scale(2, 2); }
 
 /* fin productos */
-/* inicio  servicios */
 .gridpadre_servicios {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -236,8 +118,11 @@ h4 {
   padding-top: 60px;
   padding: 2cm; }
 
-/* fin servicios */
-/* inicio contacto */
+/* inicio @media servicios */
+.gradiente {
+  background-image: linear-gradient(#20200f, #d6db36); }
+
+/* fin @media servicios */
 .fondocontacto {
   background-image: url(../assets/imag/contacto.jpg);
   height: 800px; }
@@ -256,62 +141,220 @@ h4 {
   padding: 2cm;
   padding-bottom: 650px; }
 
-/* fin contacto */
-/* inicio vista mobile index_nosotros_servicios */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+body {
+  background-color: #f6f676; }
+
+/* inicio header canario */
+header {
+  background-color: #fbfbfa; }
+
+header h1 {
+  font-family: 'Nanum Pen Script', cursive;
+  color: #eeee1b;
+  font-size: 70px;
+  padding-top: 0%; }
+
+header h2 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #737373;
+  margin-bottom: 0.2rem; }
+
+.logo__flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.carrito {
+  font-size: 200%; }
+
+header img {
+  height: 70px;
+  width: 100px;
+  margin: 0 0 0 20px; }
+
+/* fin header canario */
+/* inicio portada index */
+.carousel-inner {
+  height: 700px; }
+
+/* mixin portada */
+.contenedor__flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+/* fin mixin portada */
+.tituloportada {
+  text-align: center;
+  color: grey;
+  font-size: 40px;
+  /* nombre */
+  animation-name: efecto;
+  /* veces que se ejecuta */
+  animation-iteration-count: infinite;
+  /* duracion */
+  animation-duration: 4s;
+  /* tiempo que demora hasta que carga */
+  animation-delay: 1s; }
+
+@keyframes efecto {
+  0% {
+    color: gray; }
+  50% {
+    color: white; }
+  75% {
+    color: black; }
+  100% {
+    color: gray; } }
+
+main .portadaText {
+  text-align: center;
+  background-color: #f6f676;
+  font-size: medium;
+  padding-bottom: 200px;
+  padding-top: 30px;
+  height: 0%; }
+  main .portadaText p {
+    margin: 2px;
+    padding: 20px; }
+
+/* fin texto de portada index */
+/* animacion titulos */
+.animacion_titulos {
+  text-align: left;
+  color: grey;
+  padding: 1cm;
+  height: 1cm;
+  /* nombre */
+  animation-name: efecto;
+  /* veces que se ejecuta */
+  animation-iteration-count: infinite;
+  /* duracion */
+  animation-duration: 4s;
+  /* tiempo que demora hasta que carga */
+  animation-delay: 1s; }
+
+@keyframes efecto {
+  0% {
+    color: gray; }
+  50% {
+    color: white; }
+  75% {
+    color: black; }
+  100% {
+    color: gray; } }
+
+/* fin animacion titulos */
+/* inicio de footer */
+footer {
+  color: white;
+  line-height: 15px;
+  background-image: url("../assets/imag/gray.jpg");
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  footer ul li {
+    font-size: 1.5rem;
+    text-align: center; }
+    footer ul li a {
+      color: white; }
+  footer .bi {
+    font-size: 1.2rem;
+    text-align: center; }
+    footer .bi p {
+      font-size: 1.5rem; }
+
+.footer__flex {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem; }
+
+.footer__creditos {
+  font-size: 0.8rem;
+  text-align: center; }
+
+/* fin de footer */
+/* inicio vista mobile index */
 @media only screen and (max-width: 420px) {
   /* inicio @media index */
   body {
-    background-color: #f5f515;
+    background-color: #f6f676;
     height: 1000px; }
+  header h1 {
+    font-family: 'Nanum Pen Script', cursive;
+    color: #eeee1b;
+    font-size: 40px;
+    padding-top: 0%; }
+  header h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #737373;
+    margin-bottom: 0.2rem; }
   .carousel-inner {
-    height: 300px; }
+    height: 300px;
+    width: 500px; }
+  .contenedor__flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center; }
+  /* fin mixin portada */
+  .tituloportada {
+    text-align: center;
+    color: grey;
+    font-size: 30px;
+    /* nombre */
+    animation-name: efecto;
+    /* veces que se ejecuta */
+    animation-iteration-count: infinite;
+    /* duracion */
+    animation-duration: 4s;
+    /* tiempo que demora hasta que carga */
+    animation-delay: 1s; }
+  @keyframes efecto {
+    0% {
+      color: gray; }
+    50% {
+      color: white; }
+    75% {
+      color: black; }
+    100% {
+      color: gray; } }
   main .portadaText p {
     text-align: center;
     background-color: #f6f676;
     font-size: medium;
-    padding-bottom: 50px;
-    padding-top: 70px;
+    padding-bottom: 30px;
+    padding-top: 40px;
     height: 0%; }
   /* fin de index */
-  /* inicio  @media nosotros */
-  .gridPadre {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px;
-    grid-template-areas: "titulo" "imagen" "texto";
-    justify-items: center; }
-  h2 {
-    grid-area: titulo;
-    text-align: center;
-    padding-bottom: 100px;
-    height: 1px; }
-  .text_nosotros {
-    grid-area: texto;
-    margin: 1cm;
-    height: 1cm;
-    padding-bottom: 600px;
-    padding-top: 10px;
-    text-align: center; }
-  .gridPadre img {
-    grid-area: imagen;
-    width: 350px;
-    padding-bottom: 1px; }
-  /* fin @media nosotros */
-  /* inicio @media servicios */
-  .gradiente {
-    background-image: linear-gradient(#20200f, #d6db36); }
-  /* fin @media servicios */
   /* inicio @media footer */
   footer {
     color: white;
-    line-height: 6px;
+    line-height: 4px;
     background-image: url("../assets/imag/gray.jpg");
     background-color: grey;
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 0;
     width: 100%;
-    height: 0.5s; }
+    font-size: 2px;
+    position: relative; }
   .bi-whatsapp:before {
     font-size: 1rem; }
   .bi-geo-alt::before {
@@ -341,11 +384,12 @@ h4 {
     color: white; }
   .footer__flex {
     display: flex;
-    justify-content: space-around;
-    font-size: 0.6rem; }
+    justify-content: space-evenly;
+    font-size: 0.3rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch; }
   .footer__creditos {
-    font-size: 0.6rem;
+    font-size: 0.3rem;
     text-align: center; }
   /* fin @media footer */ }
-
-/* fin vista mobile index nosotros y servicios*/

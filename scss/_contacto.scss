@@ -1,0 +1,19 @@
+.fondocontacto {
+    background-image: url(../assets/imag/contacto.jpg);
+    height: 800px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 5cm;
+    height: 5cm;
+    font-size: 1.2rem;
+    color: white;
+    padding: 2cm;
+    padding-bottom: 650px;
+}
