@@ -1,15 +1,10 @@
 .fondocontacto {
     background-image: url(../assets/imag/contacto.jpg);
-    height: 800px;
+    height: 900px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: flex-end;
-    align-items: flex-end;
-    justify-content: space-around;
+    @include contactoflex(flex, column, nowrap, flex-end, flex-end, space-around);
     margin: 5cm;
     height: 5cm;
     font-size: 1.2rem;

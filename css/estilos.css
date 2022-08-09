@@ -1,10 +1,17 @@
 /* mixin portada index */
 /*  fin mixin portada index  */
+/* inicio mixin footer_flex */
+/* fin mixin footer_flex */
+/* inicio mixin flex productos */
+/* fin mixin flex productos */
+/* inicio mixin flex contacto */
+/* fin mixin flex contacto */
+/* inicio mixin footer_flex vista mobile */
 /*inicio main de nosotros */
 .gridPadre {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 50px;
+  grid-template-rows: 70px 70px;
   grid-template-areas: "titulo titulo" "texto imagen";
   justify-items: left; }
 
@@ -18,13 +25,13 @@
   grid-area: texto;
   margin: 1cm;
   height: 1cm;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   padding-top: 10px; }
 
 .gridPadre img {
   grid-area: imagen;
   width: 600px;
-  padding-bottom: 400px; }
+  padding-bottom: 200px; }
 
 /* fin main de nosotros */
 /* inicio  @media nosotros */
@@ -52,27 +59,24 @@
     width: 350px;
     padding-bottom: 1px; } }
 
-h4 {
-  color: white;
-  text-align: start;
-  padding: 0.5cm; }
+.tit_alimentos, .tit_accesorios {
+  color: black;
+  padding: 50px;
+  border: 120px;
+  padding-bottom: 1px; }
 
-.alimentos_flex {
+.tit_cuchas {
+  padding: 50px;
+  border: 120px;
+  padding-bottom: 1px; }
+
+.alimentos_flex, .accesorios_flex {
   display: flex;
   align-content: flex-start;
   justify-content: space-around;
   align-items: center;
   flex-direction: row; }
-  .alimentos_flex img:hover {
-    transform: scale(2, 2); }
-
-.accesorios_flex {
-  display: flex;
-  align-content: flex-start;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row; }
-  .accesorios_flex img:hover {
+  .alimentos_flex img:hover, .accesorios_flex img:hover {
     transform: scale(2, 2); }
 
 .cuchas_flex {
@@ -81,7 +85,7 @@ h4 {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  padding-bottom: 300px; }
+  padding-bottom: 200px; }
   .cuchas_flex img:hover {
     transform: scale(2, 2); }
 
@@ -98,25 +102,29 @@ h4 {
 
 .peluqueria {
   grid-area: 1 / 1 / 2 / 2;
-  padding: 2cm;
-  border: 1cm; }
+  padding: 30px;
+  border: 20px;
+  padding-bottom: 1px; }
 
 .imgpeluqueria {
   grid-area: 1 / 2 / 2 / 3;
-  border: 1cm;
-  padding: 2cm; }
+  border: 20px;
+  padding: 30px;
+  padding-bottom: 1px; }
 
 .veterinaria {
   grid-area: 2 / 1 / 3 / 2;
-  padding: 2cm;
+  padding: 30px;
+  border: 20px;
   padding-bottom: 300px;
-  padding-top: 60px; }
+  padding-top: 10px; }
 
 .imgveterinaria {
   grid-area: 2 / 2 / 3 / 3;
   padding-bottom: 300px;
-  padding-top: 60px;
-  padding: 2cm; }
+  padding-top: 10px;
+  padding: 30px;
+  border: 20px; }
 
 /* inicio @media servicios */
 .gradiente {
@@ -125,7 +133,7 @@ h4 {
 /* fin @media servicios */
 .fondocontacto {
   background-image: url(../assets/imag/contacto.jpg);
-  height: 800px; }
+  height: 900px; }
 
 .form-group {
   display: flex;
@@ -164,14 +172,6 @@ header h2 {
   color: #737373;
   margin-bottom: 0.2rem; }
 
-.logo__flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: flex-start;
-  align-items: flex-start; }
-
 .carrito {
   font-size: 200%; }
 
@@ -195,7 +195,7 @@ header img {
   align-items: center; }
 
 /* fin mixin portada */
-.tituloportada {
+.tituloportada, .animacion_titulos {
   text-align: center;
   color: grey;
   font-size: 40px;
@@ -222,40 +222,22 @@ main .portadaText {
   text-align: center;
   background-color: #f6f676;
   font-size: medium;
-  padding-bottom: 200px;
   padding-top: 30px;
-  height: 0%; }
+  height: 0%;
+  padding-bottom: 200px; }
   main .portadaText p {
-    margin: 2px;
-    padding: 20px; }
+    margin: 20px;
+    padding: 5px;
+    border: 15px; }
 
 /* fin texto de portada index */
-/* animacion titulos */
+/* extend animacion titulos */
 .animacion_titulos {
   text-align: left;
-  color: grey;
   padding: 1cm;
-  height: 1cm;
-  /* nombre */
-  animation-name: efecto;
-  /* veces que se ejecuta */
-  animation-iteration-count: infinite;
-  /* duracion */
-  animation-duration: 4s;
-  /* tiempo que demora hasta que carga */
-  animation-delay: 1s; }
+  height: 1cm; }
 
-@keyframes efecto {
-  0% {
-    color: gray; }
-  50% {
-    color: white; }
-  75% {
-    color: black; }
-  100% {
-    color: gray; } }
-
-/* fin animacion titulos */
+/* extend animacion titulos */
 /* inicio de footer */
 footer {
   color: white;
@@ -270,7 +252,7 @@ footer {
   footer ul li {
     font-size: 1.5rem;
     text-align: center; }
-    footer ul li a {
+    footer ul li p {
       color: white; }
   footer .bi {
     font-size: 1.2rem;
@@ -281,6 +263,7 @@ footer {
 .footer__flex {
   display: flex;
   justify-content: space-around;
+  font-size: 0.8rem;
   font-size: 0.8rem; }
 
 .footer__creditos {
@@ -288,108 +271,3 @@ footer {
   text-align: center; }
 
 /* fin de footer */
-/* inicio vista mobile index */
-@media only screen and (max-width: 420px) {
-  /* inicio @media index */
-  body {
-    background-color: #f6f676;
-    height: 1000px; }
-  header h1 {
-    font-family: 'Nanum Pen Script', cursive;
-    color: #eeee1b;
-    font-size: 40px;
-    padding-top: 0%; }
-  header h2 {
-    font-family: 'Times New Roman', Times, serif;
-    color: #737373;
-    margin-bottom: 0.2rem; }
-  .carousel-inner {
-    height: 300px;
-    width: 500px; }
-  .contenedor__flex {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center; }
-  /* fin mixin portada */
-  .tituloportada {
-    text-align: center;
-    color: grey;
-    font-size: 30px;
-    /* nombre */
-    animation-name: efecto;
-    /* veces que se ejecuta */
-    animation-iteration-count: infinite;
-    /* duracion */
-    animation-duration: 4s;
-    /* tiempo que demora hasta que carga */
-    animation-delay: 1s; }
-  @keyframes efecto {
-    0% {
-      color: gray; }
-    50% {
-      color: white; }
-    75% {
-      color: black; }
-    100% {
-      color: gray; } }
-  main .portadaText p {
-    text-align: center;
-    background-color: #f6f676;
-    font-size: medium;
-    padding-bottom: 30px;
-    padding-top: 40px;
-    height: 0%; }
-  /* fin de index */
-  /* inicio @media footer */
-  footer {
-    color: white;
-    line-height: 4px;
-    background-image: url("../assets/imag/gray.jpg");
-    background-color: grey;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    width: 100%;
-    font-size: 2px;
-    position: relative; }
-  .bi-whatsapp:before {
-    font-size: 1rem; }
-  .bi-geo-alt::before {
-    font-size: 1rem; }
-  .bi-envelope::before {
-    font-size: 1rem; }
-  .fa-facebook-f:before {
-    font-size: 1rem;
-    color: white; }
-  .fa-instagram:before {
-    font-size: 1rem;
-    color: white; }
-  .fa-twitter:before {
-    font-size: 1rem;
-    color: white; }
-  .fa-cc-visa:before {
-    font-size: 1rem;
-    color: white; }
-  .fa-cc-mastercard::before {
-    font-size: 1rem;
-    color: white; }
-  .fa-cc-amex:before {
-    font-size: 1rem;
-    color: white; }
-  .fa-cc-paypal:before {
-    font-size: 1rem;
-    color: white; }
-  .footer__flex {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 0.3rem;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: stretch; }
-  .footer__creditos {
-    font-size: 0.3rem;
-    text-align: center; }
-  /* fin @media footer */ }
