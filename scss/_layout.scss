@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: map-get($map: $palette, $key:"primary");
+}
+
+/* inicio header canario */
+header {
+    background-color: map-get($map:$palette, $key: "secondary");
+}
+
+
+
+header h1 {
+    font-family: 'Nanum Pen Script', cursive;
+    color: map-get($map:$palette , $key:"accent" );
+    font-size: 70px;
+    padding-top: 0%;
+}
+
+header h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(115, 115, 115);
+    margin-bottom: 0.2rem;
+}
+
+.carrito {
+    font-size: 200%;
+}
+
+header img {
+    @include altoAncho(70px, 100px);
+    margin: 0 0 0 20px;
+}
+
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 520px;
+}
+
+/* fin header canario */
+
+/* inicio portada index */
+
+/* mixin portada */
+.contenedor__flex {
+    @include flex (flex, column, nowrap, center, center, center)
+}
+
+/* fin mixin portada */
+.tituloportada {
+    text-align: center;
+    color: grey;
+    font-size: 40px;
+    /* nombre */
+    animation-name: efecto;
+    /* veces que se ejecuta */
+    animation-iteration-count: infinite;
+    /* duracion */
+    animation-duration: 4s;
+    /* tiempo que demora hasta que carga */
+    animation-delay: 1s;
+}
+
+@keyframes efecto {
+    0% {
+        color: gray;
+    }
+
+    50% {
+        color: white;
+    }
+
+    75% {
+        color: black;
+    }
+
+    100% {
+        color: gray;
+    }
+}
+
+main .portadaText {
+    text-align: center;
+    background-color: rgb(246, 246, 118);
+    font-size: medium;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    p {
+        margin: 10px;
+        padding: 5px;
+        border: 15px;
+    }
+
+}
+
+/* fin texto de portada index */
+/* extend animacion titulos */
+.animacion_titulos {
+    @extend .tituloportada;
+    text-align: left;
+    padding: 20px;
+    height: 1px;
+    border: 5px;
+    
+}
+
+/* extend animacion titulos */
+/* inicio de footer */
+footer {
+    color: white;
+    background-image: url("../assets/imag/gray.jpg");
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+
+    ul {
+        li {
+            font-size: 1.5rem;
+            text-align: center;
+
+            p {
+                color: white;
+            }
+        }
+    }
+
+    .bi {
+        font-size: 1.2rem;
+        text-align: center;
+
+        p {
+            font-size: 1.5rem;
+
+        }
+    }
+
+
+}
+
+.footer__flex {
+    @include flexfooter(flex,space-around,row,wrap,center,flex-start);
+    font-size: 0.8rem;
+}
+    
+.footer__creditos {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* fin de footer */

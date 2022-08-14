@@ -1,0 +1,589 @@
+/* inicio vista tablet */
+/* inicio vista tablet index */
+@media only screen and (min-width:421px)and(max-width:960px) {
+    header h1 {
+        font-family: 'Nanum Pen Script', cursive;
+        color: #eeee1b;
+        font-size: 40px;
+        padding-top: 0%;
+    }
+
+    header h2 {
+        padding-bottom: 50px;
+        height: 1px;
+    }
+
+    header img {
+        @include altoAncho(50px, 70px);
+        margin: 0 0 0 20px;
+    }
+
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 270px;
+    }
+
+    .tituloportada {
+        text-align: center;
+        color: grey;
+        font-size: 30px;
+        /* nombre */
+        animation-name: efecto;
+        /* veces que se ejecuta */
+        animation-iteration-count: infinite;
+        /* duracion */
+        animation-duration: 4s;
+        /* tiempo que demora hasta que carga */
+        animation-delay: 1s;
+    }
+
+    @keyframes efecto {
+        0% {
+            color: gray;
+        }
+
+        50% {
+            color: white;
+        }
+
+        75% {
+            color: black;
+        }
+
+        100% {
+            color: gray;
+        }
+    }
+
+    .animacion_titulos {
+        text-align: center;
+        padding: 1px;
+        height: 1px;
+        color: grey;
+        font-size: 40px;
+        /* nombre */
+        animation-name: efecto;
+        /* veces que se ejecuta */
+        animation-iteration-count: infinite;
+        /* duracion */
+        animation-duration: 4s;
+        /* tiempo que demora hasta que carga */
+        animation-delay: 1s;
+    }
+
+    @keyframes efecto {
+        0% {
+            color: gray;
+        }
+
+        50% {
+            color: white;
+        }
+
+        75% {
+            color: black;
+        }
+
+        100% {
+            color: gray;
+        }
+    }
+
+    .footer__flex {
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* fin vista tablet index */
+
+    /* inicio vista tablet nosotros */
+    .gridPadre {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px;
+        grid-template-areas:
+            "titulo"
+            "imagen"
+            "texto";
+        justify-items: center;
+
+    }
+
+    h2 {
+        grid-area: titulo;
+        text-align: center;
+        padding-bottom: 100px;
+        height: 1px;
+        font-size: 30px;
+    }
+
+    .text_nosotros {
+        grid-area: texto;
+        margin: 1cm;
+        height: 1cm;
+        padding-bottom: 500px;
+        padding-top: 10px;
+        text-align: center;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .gridPadre img {
+        grid-area: imagen;
+        width: 350px;
+        padding-bottom: 1px;
+    }
+
+    /* fin vista tablet nosotros */
+
+    /* inicio vista tablet productos */
+    .alimentos_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 1px;
+
+
+    }
+
+    .accesorios_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 1px;
+
+    }
+
+    .cuchas_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 200px;
+        flex-wrap: nowrap;
+        padding: 20px;
+    }
+
+    /* fin vista tablet productos */
+
+    /* inicio vista tablet servicios */
+    .gridpadre_servicios {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: stretch;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 2px;
+        margin: 3px;
+        height: 1900px;
+        gap: 20px;
+
+    }
+
+    .peluqueria {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 490px;
+        text-align: left;
+        font-size: 18px;
+
+    }
+
+    .imgpeluqueria {
+        grid-area: 2 / 1 / 3 / 2;
+        padding-top: 0px;
+        height: 350px;
+        margin: 1px;
+
+    }
+
+    .peluqueria {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 350px;
+        height: 400px;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .imgpeluqueria {
+        grid-area: 2 / 1 / 3 / 2;
+        padding-top: 0px;
+        height: 330px;
+    }
+
+    .gridpadre_servicios img {
+        width: 330px;
+        height: 320px;
+    }
+
+    .veterinaria {
+        grid-area: 3 / 1 / 4 / 2;
+        padding: 10px;
+        width: 350px;
+        text-align: left;
+        font-size: 18px;
+        margin: 10px;
+        height: 600px;
+    }
+
+    .imgveterinaria {
+        grid-area: 4 / 1 / 5 / 2;
+        width: 360px;
+        height: 400px;
+        margin-left: 40px;
+    }
+
+    /* fin vista tablet servicios */
+
+    /* inicio vista tablet contacto */
+    .fondocontacto {
+        background-color: map-get($map: $palette, $key:"primary");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: white;
+        padding: 30px;
+        padding-bottom: 900px;
+        margin: 10px;
+        padding-top: 300px;
+    }
+
+    .mb-1 {
+        margin-bottom: .25rem !important;
+        width: 300px;
+    }
+
+    /* fin vista tablet contacto */
+}
+
+/* fin vista tablet */
+
+/* inicio vista mobile */
+/* inicio vista mobile index */
+@media only screen and (max-width:420px) {
+    header h1 {
+        font-family: 'Nanum Pen Script', cursive;
+        color: #eeee1b;
+        font-size: 50px;
+        padding-top: 0%;
+    }
+
+    header h2 {
+        padding-bottom: 50px;
+        height: 1px;
+    }
+
+    .carrito {
+        font-size: 200%;
+    }
+
+    header img {
+        @include altoAncho(70px, 100px);
+        margin: 0 0 0 5px;
+    }
+
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 220px;
+    }
+
+    .contenedor__flex {
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tituloportada {
+        text-align: center;
+        color: grey;
+        font-size: 30px;
+        /* nombre */
+        animation-name: efecto;
+        /* veces que se ejecuta */
+        animation-iteration-count: infinite;
+        /* duracion */
+        animation-duration: 4s;
+        /* tiempo que demora hasta que carga */
+        animation-delay: 1s;
+    }
+
+    @keyframes efecto {
+        0% {
+            color: gray;
+        }
+
+        50% {
+            color: white;
+        }
+
+        75% {
+            color: black;
+        }
+
+        100% {
+            color: gray;
+        }
+    }
+
+    main .portadaText {
+        text-align: center;
+        background-color: rgb(246, 246, 118);
+        font-size: medium;
+        padding-top: 10px;
+
+        p {
+            margin: 10px;
+            padding: 2px;
+            border: 10px;
+        }
+    }
+
+    .animacion_titulos {
+        text-align: center;
+        padding: 1px;
+        height: 1px;
+        color: grey;
+        font-size: 30px;
+        /* nombre */
+        animation-name: efecto;
+        /* veces que se ejecuta */
+        animation-iteration-count: infinite;
+        /* duracion */
+        animation-duration: 4s;
+        /* tiempo que demora hasta que carga */
+        animation-delay: 1s;
+    }
+
+    @keyframes efecto {
+        0% {
+            color: gray;
+        }
+
+        50% {
+            color: white;
+        }
+
+        75% {
+            color: black;
+        }
+
+        100% {
+            color: gray;
+        }
+    }
+
+    .footer__flex {
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    /* fin vista mobile index */
+
+    /* inicio vista mobile nosotros */
+    .gridPadre {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px;
+        grid-template-areas:
+            "titulo"
+            "imagen"
+            "texto";
+        justify-items: center;
+
+    }
+
+    h2 {
+        grid-area: titulo;
+        text-align: center;
+        padding-bottom: 100px;
+        height: 1px;
+    }
+
+    .text_nosotros {
+        grid-area: texto;
+        margin: 1cm;
+        height: 1cm;
+        padding-bottom: 400px;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .gridPadre img {
+        grid-area: imagen;
+        width: 350px;
+        padding-bottom: 1px;
+    }
+
+    /* fin vista mobile nosotros */
+
+    /* inicio vista mobile productos*/
+    .alimentos_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 1px;
+
+    }
+
+    .accesorios_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 1px;
+
+    }
+
+    .cuchas_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 1px;
+        padding: 20px;
+    }
+
+    /* fin vista mobile productos */
+
+    /* inicio vista mobile servicios */
+    .gridpadre_servicios {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: stretch;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 2px;
+        margin: 5px;
+        height: 1900px;
+
+    }
+
+    .peluqueria {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 350px;
+        height: 450px;
+        text-align: left;
+        font-size: 18px;
+
+    }
+
+    .imgpeluqueria {
+        grid-area: 2 / 1 / 3 / 2;
+        padding-top: 0px;
+        height: 330px;
+
+    }
+
+    .peluqueria {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 350px;
+        height: 450px;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .imgpeluqueria {
+        grid-area: 2 / 1 / 3 / 2;
+        padding-top: 0px;
+        height: 330px;
+    }
+
+    .gridpadre_servicios img {
+        width: 330px;
+        height: 320px;
+    }
+
+    .veterinaria {
+        grid-area: 3 / 1 / 4 / 2;
+        padding: 10px;
+        width: 350px;
+        text-align: left;
+        font-size: 18px;
+        margin: 10px;
+        height: 600px
+    }
+
+    .imgveterinaria {
+        grid-area: 4 / 1 / 5 / 2;
+        width: 360px;
+        height: 400px;
+    }
+
+    /* fin vista mobile servicios */
+
+    /* inicio vista mobile contacto */
+    .fondocontacto {
+        background-color: map-get($map: $palette, $key:"primary");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: white;
+        padding: 30px;
+        padding-bottom: 900px;
+        margin: 10px;
+        padding-top: 300px;
+    }
+
+    .mb-1 {
+        margin-bottom: .25rem !important;
+        width: 300px;
+    }
+
+    /* fin vista mobile contacto */
+}
+
+/* fin vista mobile */

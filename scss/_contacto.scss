@@ -1,14 +1,17 @@
 .fondocontacto {
     background-image: url(../assets/imag/contacto.jpg);
+    background-color: map-get($map: $palette, $key:"primary");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 900px;
 }
 
 .form-group {
-    @include contactoflex(flex, column, nowrap, flex-end, flex-end, space-around);
-    margin: 5cm;
-    height: 5cm;
+    @include contactoflex(flex, column, nowrap, center, center, space-around);
+    margin: 20rem;
+    height: 10rem;
     font-size: 1.2rem;
     color: white;
-    padding: 2cm;
+    padding: 2px;
     padding-bottom: 650px;
 }

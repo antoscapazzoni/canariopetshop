@@ -21,42 +21,47 @@
 
 <body>
     <!-- Inicio de header -->
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="row">
-            <div class="logo__flex col-sm-12 my-1">
-                <a href="../index.html"><img src="../assets/imag/logo1.jpeg" alt=logo></a>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="navbar-brand" href="../index.html">INICIO</a>
-                    <a class="nav-link" aria-current="page" href="../views/nosotros.html">NOSOTROS</a>
-                    <a class="nav-link" href="../views/productos.html">PRODUCTOS</a>
-                    <a class="nav-link" href="../views/servicios.html">SERVICIOS</a>
-                    <a class="nav-link" href="../views/contacto.html">CONTACTO</a>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="row">
+                <div class="logo__flex col-sm-12 my-1">
+                    <a href="../index.html"><img src="../assets/imag/logo1.jpeg" alt=logo></a>
                 </div>
             </div>
-            <div class="carrito"><i class="bi bi-cart4"></i></div>
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="navbar-brand" href="../index.html">INICIO</a>
+                        <a class="nav-link" aria-current="page" href="../views/nosotros.html">NOSOTROS</a>
+                        <a class="nav-link" href="../views/productos.html">PRODUCTOS</a>
+                        <a class="nav-link" href="../views/servicios.html">SERVICIOS</a>
+                        <a class="nav-link" href="../views/contacto.html">CONTACTO</a>
+                    </div>
+                </div>
+                <div class="carrito"><i class="bi bi-cart4"></i></div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+
+            <h1 class="text-center mt-4">Canario Pet Shop</h1>
+            <h2 class="text-center">Tienda para mascotas</h2>
         </div>
-    </nav>
-    <header class="container-fluid">
-        <h1 class="text-center mt-4">Canario Pet Shop</h1>
-        <h2 class="text-center">Tienda para mascotas</h2>
     </header>
     <!-- Fin de header -->
+    <!-- inicio de main -->
     <main>
         <div class="animacion_titulos">
             <h2>Productos</h2>
         </div>
         <!-- Incio imagenes de productos -->
         <div class="tit_alimentos">
-        <h3>Alimentos</h3>
-    </div>
+            <h3>Alimentos</h3>
+        </div>
         <div class="alimentos_flex">
             <div class="card" style="width: 18rem;">
                 <img src="../assets/imag/catchow.jpg" class="card-img-top" alt="catchow">
@@ -89,8 +94,8 @@
             </div>
         </div>
         <div class="tit_accesorios">
-        <h3>Accesorios</h3>
-    </div>
+            <h3>Accesorios</h3>
+        </div>
         <div class="accesorios_flex">
             <div class="card" style="width: 18rem;">
                 <img src="../assets/imag/comederos.jpg" class="card-img-top" alt="comederos">
@@ -118,8 +123,8 @@
             </div>
         </div>
         <div class="tit_cuchas">
-        <h3>Cuchas</h3>
-    </div>
+            <h3>Cuchas</h3>
+        </div>
         <div class="cuchas_flex">
             <div class="card" style="width: 18rem;">
                 <img src="../assets/imag/cucha1.jpg" class="card-img-top" alt="cucharayada">
@@ -149,8 +154,9 @@
                 </div>
             </div>
         </div>
+        <!-- Fin de imagenes de productos -->
     </main>
-    <!-- Fin de imagenes de productos -->
+    <!-- fin de main -->
     <!-- Inicio de footer -->
     <footer>
         <div class="footer__flex">
@@ -161,17 +167,19 @@
                 <p><i class="bi bi-envelope">tiendaonline@canariopetshop.com</i></p>
             </div>
             <div>
-                <h4>Redes Sociales</h4>
+                <h3>Redes Sociales</h3>
                 <ul class="mt-4 list unstyled">
                     <li class="list-inline-item">
-                        <p><i class="fab fa-facebook-f"></i></p>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+
                     </li>
                     <li class="list-inline-item">
-                        <p><i class="fab fa-instagram"></i></p>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+
                     </li>
                     <li class="list-inline-item">
-                        <p><i class="fab fa-twitter"></i></p>
-                        
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+
                     </li>
                 </ul>
             </div>
@@ -188,7 +196,7 @@
 
                     <li class="list-inline-item">
                         <p><i class="fab fa-cc-amex"></i></p>
-                            
+
                     </li>
 
                     <li class="list-inline-item">

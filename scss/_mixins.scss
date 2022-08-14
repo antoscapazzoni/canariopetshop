@@ -19,16 +19,29 @@
 /*  fin mixin portada index  */
 
 /* inicio mixin footer_flex */
-@mixin footer_flex ($dis, $justify) {
+@mixin flexfooter($dis,$justify,$flex-direction,$flex-wrap,$content,$items) {
+
     display: $dis;
     justify-content: $justify;
-    font-size: 0.8rem;
-
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    align-content: $content;
+    align-items: $items;
+    
 }
 
 /* fin mixin footer_flex */
+
+
 /* inicio mixin flex productos */
-@mixin alimentosflex($dis, $align-content, $justify, $align-items, $direction) {
+@mixin alimentosflex($dis,$align-content,$justify,$align-items,$direction){
+    display: $dis;
+    align-content: $align-content;
+    justify-content: $justify;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
+@mixin cuchasflex($dis,$align-content,$justify,$align-items,$direction) {
     display: $dis;
     align-content: $align-content;
     justify-content: $justify;
@@ -53,11 +66,3 @@
 
 
 /* inicio mixin footer_flex vista mobile */
-
-@mixin footermobile($dis, $justify, $flex-wrap, $direction, $align) {
-    display: $dis;
-    justify-content: $justify;
-    flex-wrap: $flex-wrap;
-    flex-direction: $direction;
-    align-items: $align;
-}

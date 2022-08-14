@@ -1,7 +1,8 @@
-$color-primary: rgb(246, 246, 118);
+$color-primary: #faea65;
 $color-secondary:rgb(251, 251, 250);
+$color-accent:rgb(238, 238, 27);
 
-$palette: (
-    "primary":  rgb(246, 246, 118),
+$palette: ("primary": #faea65,
     "secondary": rgb(251, 251, 250),
+    "accent":rgb(238, 238, 27),
 );

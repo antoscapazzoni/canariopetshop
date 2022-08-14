@@ -69,9 +69,7 @@ header nav ul li {
 /* fin header canario */
 
 /* inicio portada index */
-.carousel-inner {
-    height: 800px;
-}
+
 
 .contenedor__flex {
     display: flex;
@@ -127,13 +125,11 @@ main .portadaText p {
 /* inicio de footer */
 footer {
     color: white;
-    line-height: 15px;
     background-image: url("../assets/imag/gray.jpg");
     background-color: grey;
     background-repeat: no-repeat;
     background-size: cover;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
 
 }
@@ -218,10 +214,10 @@ h2 {
 
 .text_nosotros{
     grid-area:texto;
-    margin: 1cm;
-    height: 1cm;
-    padding-bottom: 400px;
-    padding-top: 20px;
+    margin: 10px;
+    height: 10px;
+    padding-bottom: 100px;
+    
 }
 
 .gridPadre img {
@@ -295,7 +291,10 @@ h2 {
     }
 
     .carousel-inner {
-        height: 300px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 220px;
     }
 
     main .portadaText p {
@@ -407,17 +406,53 @@ h2 {
         color: white;
     }
 
-    .footer__flex {
-        display: flex;
-        justify-content: space-around;
-        font-size: 0.6rem;
-        
-    }
+.footer__flex{
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+}
+
 
     .footer__creditos {
         font-size: 0.6rem;
         text-align: center;
     }
     /* fin @media footer */
+    .alimentos_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 1px;
+    }
+    
+    .accesorios_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 1px;
+    
+    }
+    
+    .cuchas_flex {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 300px;
+        flex-wrap: nowrap;
+        padding: 1px;
+    }
+    
+    
 }
 /* fin vista mobile index nosotros y servicios*/

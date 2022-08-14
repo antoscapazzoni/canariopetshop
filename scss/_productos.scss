@@ -18,24 +18,20 @@
 }
 
 .alimentos_flex {
-    @include alimentosflex(flex, flex-start, space-around, center, row);
-
+    @include alimentosflex(flex,flex-start,space-around,center,row);
     img:hover {
-        transform: scale(2, 2);
+        transform: scale(1, 1);
     }
 
 }
 
+
 .accesorios_flex {
-    @extend .alimentos_flex
+    @extend .alimentos_flex;
 }
 
 .cuchas_flex {
-    display: flex;
-    align-content: flex-start;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
+    @include cuchasflex(flex,flex-start,space-around,center,row);
     padding-bottom: 200px;
 
     img:hover {
